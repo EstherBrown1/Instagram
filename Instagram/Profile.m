@@ -6,8 +6,8 @@
 //  Copyright © 2019 estherb. All rights reserved.
 //
 
-#import "ProfileViewController.h"
-#import "TimelineViewController.h"
+#import "Profile.h"
+#import "HomeFeed.h"
 #import "PostCell.h"
 #import "Post.h"
 #import <Parse/Parse.h>

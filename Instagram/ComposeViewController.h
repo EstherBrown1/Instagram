@@ -25,5 +25,5 @@ NS_ASSUME_NONNULL_BEGIN
 - (IBAction)share:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 @property (weak, nonatomic) IBOutlet UIImageView *uploadImage;
-
+@end
 NS_ASSUME_NONNULL_END

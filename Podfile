@@ -7,9 +7,7 @@ target 'Instagram' do
 
   # Pods for Instagram
   pod 'Parse'
-  pod 'ParseUI'
   pod 'DateTools'
-  pod 'SVPullToRefresh'
   pod 'MBProgressHUD'
 
   target 'InstagramTests' do

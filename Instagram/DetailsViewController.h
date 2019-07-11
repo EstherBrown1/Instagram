@@ -6,12 +6,15 @@
 //  Copyright © 2019 estherb. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "Post.h"
+#import "Parse/Parse.h"
 
-NS_ASSUME_NONNULL_BEGIN
 
 @interface DetailsViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UILabel *timeStampLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *detailsImageView;
+@property (strong, nonatomic) IBOutlet UITextView *Caption;
+@property (weak, nonatomic) IBOutlet UILabel *likeCount;
+@property (strong, nonatomic) Post* post;
 
 @end
-
-NS_ASSUME_NONNULL_END
