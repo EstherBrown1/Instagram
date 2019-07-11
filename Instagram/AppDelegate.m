@@ -23,6 +23,8 @@
         configuration.server = @"https:fbu-instagram-est.herokuapp.com/parse";
     }];
     
+    [Parse initializeWithConfiguration:config];
+    
     // persisting User Session
     if (PFUser.currentUser) {
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
