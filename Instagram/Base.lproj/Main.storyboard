@@ -505,7 +505,6 @@
                                 <state key="normal" title="Log In"/>
                                 <connections>
                                     <action selector="didTapLogin:" destination="VZK-Oi-6SF" eventType="touchUpInside" id="wRk-lO-xZB"/>
-                                    <segue destination="eVd-pv-Dh0" kind="show" identifier="tabBarController" id="YdM-ZX-eeq"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="usg-Sd-9lF">
@@ -522,6 +521,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="8lz-JG-mSC"/>
                     </view>
+                    <connections>
+                        <segue destination="eVd-pv-Dh0" kind="presentation" id="dtf-bn-ubc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JuI-N2-zvv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -558,6 +560,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="zHR-ME-mLx"/>
-        <segue reference="J0F-fS-SVH"/>
+        <segue reference="dtf-bn-ubc"/>
     </inferredMetricsTieBreakers>
 </document>
