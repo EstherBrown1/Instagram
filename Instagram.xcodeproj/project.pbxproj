@@ -14,8 +14,6 @@
 		AB48485022D620A1003FBDFB /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB48484F22D620A1003FBDFB /* SignUpViewController.m */; };
 		AB48485922D64670003FBDFB /* ComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB48485822D64670003FBDFB /* ComposeViewController.m */; };
 		AB48485C22D64D63003FBDFB /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB48485B22D64D63003FBDFB /* CameraViewController.m */; };
-		AB48486822D6B185003FBDFB /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = AB48486722D6B185003FBDFB /* Post.m */; };
-		AB48486B22D6B717003FBDFB /* PostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB48486A22D6B717003FBDFB /* PostCell.m */; };
 		AB48487522D72874003FBDFB /* HomeFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = AB48487322D72874003FBDFB /* HomeFeed.m */; };
 		AB48487822D72A34003FBDFB /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB48487722D72A34003FBDFB /* DetailsViewController.m */; };
 		AB72BA2422D4012200E1A3F3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AB72BA2322D4012200E1A3F3 /* AppDelegate.m */; };
@@ -29,6 +27,8 @@
 		ABF3578422D7758100677965 /* PostCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF3578322D7758100677965 /* PostCollectionViewCell.m */; };
 		ABF3578A22D78CDE00677965 /* InfiniteScrollActivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF3578922D78CDE00677965 /* InfiniteScrollActivityView.m */; };
 		ABF3579322D7C5C100677965 /* ProfileViewConttroller.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF3579222D7C5C100677965 /* ProfileViewConttroller.m */; };
+		ABF3579A22D7E8EF00677965 /* PostViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF3579922D7E8EF00677965 /* PostViewCell.m */; };
+		ABF3579D22D7ED2700677965 /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF3579C22D7ED2700677965 /* Post.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,10 +62,6 @@
 		AB48485822D64670003FBDFB /* ComposeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComposeViewController.m; sourceTree = "<group>"; };
 		AB48485A22D64D63003FBDFB /* CameraViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
 		AB48485B22D64D63003FBDFB /* CameraViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
-		AB48486622D6B185003FBDFB /* Post.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
-		AB48486722D6B185003FBDFB /* Post.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
-		AB48486922D6B717003FBDFB /* PostCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostCell.h; sourceTree = "<group>"; };
-		AB48486A22D6B717003FBDFB /* PostCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostCell.m; sourceTree = "<group>"; };
 		AB48487322D72874003FBDFB /* HomeFeed.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = HomeFeed.m; path = ../HomeFeed.m; sourceTree = "<group>"; };
 		AB48487422D72874003FBDFB /* HomeFeed.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HomeFeed.h; path = ../HomeFeed.h; sourceTree = "<group>"; };
 		AB48487622D72A34003FBDFB /* DetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
@@ -92,6 +88,10 @@
 		ABF3578922D78CDE00677965 /* InfiniteScrollActivityView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InfiniteScrollActivityView.m; sourceTree = "<group>"; };
 		ABF3579122D7C5C100677965 /* ProfileViewConttroller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileViewConttroller.h; sourceTree = "<group>"; };
 		ABF3579222D7C5C100677965 /* ProfileViewConttroller.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileViewConttroller.m; sourceTree = "<group>"; };
+		ABF3579822D7E8EF00677965 /* PostViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostViewCell.h; sourceTree = "<group>"; };
+		ABF3579922D7E8EF00677965 /* PostViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostViewCell.m; sourceTree = "<group>"; };
+		ABF3579B22D7ED2700677965 /* Post.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
+		ABF3579C22D7ED2700677965 /* Post.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
 		C250E64ABF4714F2505492DB /* Pods-InstagramUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramUITests.debug.xcconfig"; path = "Target Support Files/Pods-InstagramUITests/Pods-InstagramUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C3CD66C22BF4E60F862B1C71 /* libPods-InstagramUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-InstagramUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAF569151E7D34419112306E /* Pods-Instagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagram.debug.xcconfig"; path = "Target Support Files/Pods-Instagram/Pods-Instagram.debug.xcconfig"; sourceTree = "<group>"; };
@@ -187,12 +187,12 @@
 				AB48487722D72A34003FBDFB /* DetailsViewController.m */,
 				AB72BA2622D4012200E1A3F3 /* ViewController.m */,
 				AB72BA2822D4012200E1A3F3 /* Main.storyboard */,
+				ABF3579822D7E8EF00677965 /* PostViewCell.h */,
+				ABF3579922D7E8EF00677965 /* PostViewCell.m */,
 				ABF3579122D7C5C100677965 /* ProfileViewConttroller.h */,
 				ABF3579222D7C5C100677965 /* ProfileViewConttroller.m */,
-				AB48486922D6B717003FBDFB /* PostCell.h */,
-				AB48486A22D6B717003FBDFB /* PostCell.m */,
-				AB48486622D6B185003FBDFB /* Post.h */,
-				AB48486722D6B185003FBDFB /* Post.m */,
+				ABF3579B22D7ED2700677965 /* Post.h */,
+				ABF3579C22D7ED2700677965 /* Post.m */,
 				AB48485A22D64D63003FBDFB /* CameraViewController.h */,
 				AB48485B22D64D63003FBDFB /* CameraViewController.m */,
 				AB48485722D64670003FBDFB /* ComposeViewController.h */,
@@ -450,17 +450,17 @@
 				AB48484D22D53F52003FBDFB /* LoginViewController.m in Sources */,
 				AB48485C22D64D63003FBDFB /* CameraViewController.m in Sources */,
 				AB48485022D620A1003FBDFB /* SignUpViewController.m in Sources */,
+				ABF3579A22D7E8EF00677965 /* PostViewCell.m in Sources */,
 				ABF3578A22D78CDE00677965 /* InfiniteScrollActivityView.m in Sources */,
 				AB48487822D72A34003FBDFB /* DetailsViewController.m in Sources */,
 				ABF3578422D7758100677965 /* PostCollectionViewCell.m in Sources */,
 				ABF3579322D7C5C100677965 /* ProfileViewConttroller.m in Sources */,
 				AB72BA2722D4012200E1A3F3 /* ViewController.m in Sources */,
 				AB72BA3222D4012300E1A3F3 /* main.m in Sources */,
+				ABF3579D22D7ED2700677965 /* Post.m in Sources */,
 				AB48485922D64670003FBDFB /* ComposeViewController.m in Sources */,
-				AB48486822D6B185003FBDFB /* Post.m in Sources */,
 				AB72BA2422D4012200E1A3F3 /* AppDelegate.m in Sources */,
 				AB48487522D72874003FBDFB /* HomeFeed.m in Sources */,
-				AB48486B22D6B717003FBDFB /* PostCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

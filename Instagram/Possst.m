@@ -2,9 +2,10 @@
 //  Post.m
 //  Instagram
 //
-//  Created by estherb on 7/11/19.
+//  Created by estherb on 7/10/19.
 //  Copyright © 2019 estherb. All rights reserved.
 //
+
 #import "Post.h"
 
 @implementation Post

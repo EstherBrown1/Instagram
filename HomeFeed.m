@@ -14,9 +14,10 @@
 #import "HomeFeed.h"
 #import "Parse/Parse.h"
 #import "Post.h"
-#import "PostCell.h"
+#import "PostViewCell.h"
 #import "ComposeViewController.h"
 #import "DetailsViewController.h"
+#import "UIImageView+AFNetworking.h"
 
 @interface HomeFeed () <ComposeViewControllerDelegate, UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) UIRefreshControl *refreshControl;
@@ -28,11 +29,13 @@
     [super viewDidLoad];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
+    self.tableView.rowHeight= 650;
+
     
-    PFQuery *postQuery = [Post query];
-    [postQuery orderByDescending:@"createdAt"];
-    [postQuery includeKey:@"author"];
-    postQuery.limit = 20;
+//    PFQuery *postQuery = [Post query];
+//    [postQuery orderByDescending:@"createdAt"];
+//    [postQuery includeKey:@"author"];
+//    postQuery.limit = 20;
     
     [self fetchData];
     self.refreshControl = [[UIRefreshControl alloc] init];
@@ -99,10 +102,20 @@
 }
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
-    PostCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PostCell" forIndexPath:indexPath];
+    PostViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PostCell" forIndexPath:indexPath];
     Post *post = self.posts[indexPath.row];
-    cell.captionLabel.text = post[@"caption"];
-    [cell setPost:post];
+    cell.userLabel.text = post[@"caption"];
+//    [cell setPost:post];
+    PFFileObject* image = post[@"image"];
+    
+    cell.posterView.image= nil;
+    NSString *URL= post.image.url;
+    NSURL *imageURL= [NSURL URLWithString:URL];
+    
+    [cell.posterView setImageWithURL:imageURL];
+    
+    
+   
     
     return cell;
 }
@@ -114,6 +127,7 @@
 - (void)didPost {
     [self fetchData];
     [self.tableView reloadData];
+    
 }
 @end
 

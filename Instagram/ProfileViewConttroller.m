@@ -7,7 +7,7 @@
 //
 #import "ProfileViewConttroller.h"
 #import "HomeFeed.h"
-#import "PostCell.h"
+#import "PostViewCell.h"
 #import "Post.h"
 #import <Parse/Parse.h>
 
