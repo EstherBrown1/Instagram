@@ -37,8 +37,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //    self.collectionView.dataSource = self;
-    //    self.collectionView.delegate = self;
+//    self.collectionView.dataSource = self;
+//    self.collectionView.delegate = self;
     self.editButton.hidden = YES;
     if(self.user == nil){
         self.user = [PFUser currentUser];
