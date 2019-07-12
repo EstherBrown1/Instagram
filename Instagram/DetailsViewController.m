@@ -51,10 +51,5 @@
     }
     self.timeStampLabel.text = createdAtString;
 }
-
-- (IBAction)cancel:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
 @end
 

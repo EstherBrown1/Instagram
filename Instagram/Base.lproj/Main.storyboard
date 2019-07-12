@@ -244,18 +244,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="eSq-32-6Qn"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ynT-BK-bJW">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="Dl3-cg-dey">
-                            <connections>
-                                <action selector="cancel:" destination="hhE-QF-Hj9" id="LbM-Al-JVK"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Share" id="eeg-A9-8WW">
-                            <connections>
-                                <action selector="share:" destination="hhE-QF-Hj9" id="Riv-Qd-E91"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
                     <connections>
                         <outlet property="Caption" destination="mNj-Ls-Ixl" id="FjI-AE-d4X"/>
                         <outlet property="detailsImageView" destination="6Br-og-Hqc" id="Hex-0S-d5B"/>
@@ -371,12 +359,11 @@
                     </navigationItem>
                     <connections>
                         <segue destination="PzB-yN-Y98" kind="presentation" id="QG3-om-ozI"/>
-                        <segue destination="VZK-Oi-6SF" kind="show" identifier="logoutSegue" id="7o4-hF-62F"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RvA-UV-dFp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1366.6666666666667" y="-407.14285714285711"/>
+            <point key="canvasLocation" x="1325" y="-206"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="QnO-Uc-2cI">
@@ -393,7 +380,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="53k-1b-4Uu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2545" y="-407"/>
+            <point key="canvasLocation" x="2490" y="-407"/>
         </scene>
         <!--Compose View Controller-->
         <scene sceneID="o5U-Iv-0Df">
@@ -568,7 +555,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xyf-6A-Jn4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="337.68115942028987" y="-407.14285714285711"/>
+            <point key="canvasLocation" x="355" y="-206"/>
         </scene>
     </scenes>
     <resources>
@@ -581,7 +568,7 @@
         <image name="profile_tab" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="OcH-qh-AvN"/>
+        <segue reference="rPc-dj-a06"/>
         <segue reference="dtf-bn-ubc"/>
     </inferredMetricsTieBreakers>
 </document>

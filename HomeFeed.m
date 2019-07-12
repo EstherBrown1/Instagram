@@ -18,6 +18,8 @@
 #import "ComposeViewController.h"
 #import "DetailsViewController.h"
 #import "UIImageView+AFNetworking.h"
+#import "AppDelegate.h"
+#import "LoginViewController.h"
 
 @interface HomeFeed () <ComposeViewControllerDelegate, UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) UIRefreshControl *refreshControl;
@@ -92,7 +94,10 @@
         if (error) {
             NSLog(@"%@", error.localizedDescription);
         } else {
-            [self performSegueWithIdentifier:@"logoutSegue" sender:nil];
+            AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+            UIStoryboard *storyboard =  [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+            LoginViewController *loginVC = [storyboard instantiateViewControllerWithIdentifier:@"tabBarController"];
+            appDelegate.window.rootViewController = loginVC;
         }
     }];
 }
@@ -104,16 +109,47 @@
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     PostViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PostCell" forIndexPath:indexPath];
     Post *post = self.posts[indexPath.row];
-    cell.userLabel.text = post[@"caption"];
+    cell.userLabel.text = post.author.username;
 //    [cell setPost:post];
-    PFFileObject* image = post[@"image"];
-    
+   // PFFileObject* image = post[@"image"];
     cell.posterView.image= nil;
     NSString *URL= post.image.url;
     NSURL *imageURL= [NSURL URLWithString:URL];
     
     [cell.posterView setImageWithURL:imageURL];
-    
+    //set our caption
+    cell.captionLabel.text = cell.post.caption;
+    cell.post=post;
+    //begin formatting and setting our relative timestamps
+    NSDate *createdAt = [cell.post createdAt];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    NSString *createdAtString = @"";
+    // Configure output format
+    formatter.dateStyle = NSDateFormatterShortStyle;
+    formatter.timeStyle = NSDateFormatterNoStyle;
+    [formatter setFormatterBehavior:NSDateFormatterBehavior10_4];
+    [formatter setDateFormat:@"E MMM d HH:mm:ss Z y"];
+    NSDate *todayDate = [NSDate date];
+    //calculate time since posted to now
+    double ti = [createdAt timeIntervalSinceDate:todayDate];
+    ti = ti * -1;
+    //NSLog(@"%f",ti);
+    if (ti < 60) {
+        int diff = ti;
+        createdAtString = [NSString stringWithFormat:@"%ds", diff];
+    } else if (ti < 3600) {
+        int diff = round(ti / 60);
+        createdAtString = [NSString stringWithFormat:@"%dm", diff];
+    } else if (ti < 86400) {
+        int diff = round(ti / 60 / 60);
+        createdAtString = [NSString stringWithFormat:@"%dh", diff];
+    } else if (ti < 2629743) {
+        int diff = round(ti / 60 / 60 / 24);
+        createdAtString = [NSString stringWithFormat:@"%dd", diff];
+    } else {
+        createdAtString = [formatter stringFromDate:createdAt];
+    }
+    cell.dateLabel.text = createdAtString;
     
    
     
