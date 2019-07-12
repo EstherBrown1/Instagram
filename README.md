@@ -2,7 +2,7 @@
 
 **Instagram** is a photo sharing app using Parse as its backend.
 
-Time spent: **35** hours spent in total
+Time spent: **45** hours spent in total
 
 ## User Stories
 
@@ -31,7 +31,7 @@ The following **optional** features are implemented:
 - [ ] Tapping on a post's username or profile photo goes to that user's profile page
 - [ ] User can comment on a post and see all comments for each post in the post details screen.
 - [ ] User can like a post and see number of likes for each post in the post details screen.
-- [X ] Implement a custom camera view.
+- [X] Implement a custom camera view.
 
 The following **additional** features are implemented:
 
