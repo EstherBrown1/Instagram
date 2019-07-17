@@ -11,7 +11,7 @@
 #import "PostCollectionViewCell.h"
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ProfileViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
+@interface ProfileViewController : UIViewController // <UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *profileImageView;
 @property (weak, nonatomic) IBOutlet UILabel *username;

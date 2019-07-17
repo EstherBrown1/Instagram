@@ -9,6 +9,7 @@
 #import "ComposeViewController.h"
 #import "Post.h"
 #import <UIKit/UIKit.h>
+#import "MBProgressHUD.h"
 
 
 @implementation ComposeViewController
@@ -42,14 +43,18 @@
 }
 
 - (IBAction)share:(id)sender {
+     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+   // [MBProgressHUD show:@"Please wait..."];
     [Post postUserImage:self.editedImage withCaption:self.textView.text withCompletion:^(BOOL success, NSError * error) {
         if (error) {
             NSLog(@"%@", error.localizedDescription);
+     //       [MBProgressHUD dismiss];
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
         } else if (success) {
             NSLog(@"sucess");
             [self.delegate didPost];
-          //  [self dismissViewControllerAnimated:YES completion:nil];
             [self.tabBarController setSelectedIndex:0];
+       //     [MBProgressHUD dismiss];
             
         }
     }];

@@ -19,7 +19,7 @@
 
     //set our caption
     self.Caption.text = self.post.caption;
-    
+    self.username.text = self.post.author.username;
     //begin formatting and setting our relative timestamps
     NSDate *createdAt = [self.post createdAt];
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];

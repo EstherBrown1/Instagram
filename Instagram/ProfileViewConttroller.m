@@ -44,34 +44,16 @@
         self.user = [PFUser currentUser];
         self.editButton.hidden = NO;
     }
+    self.username.text= self.user.username;
+    
+    
     // [self fetchPosts];
     self.editButton.layer.borderWidth = 1.0f;
     self.editButton.layer.borderColor = [[UIColor grayColor] CGColor];
     self.editButton.layer.cornerRadius = 5.0f;
     self.profileImageView.layer.cornerRadius = 50.0f;
     
-    //    PFFileObject *image = [self.user objectForKey:@"profileImage"];
-    //    [image getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
-    //        if (!data) {
-    //            return NSLog(@"%@", error);
-    //        }
-    //        // Do something with the image
-    //        self.profileImage = [UIImage imageWithData:data];
-    //        self.profileImageView.image = self.profileImage;
-    //    }];
-    //    self.username.text = self.user.username;
-    //    NSString *userBio = [self.user objectForKey:@"userBio"];
-    //    self.bioLabel.text = userBio;
-    
-    //    UICollectionViewFlowLayout *layout = (UICollectionViewFlowLayout *)self.collectionView.collectionViewLayout;
-    //    layout.minimumLineSpacing = 2;
-    //    layout.minimumInteritemSpacing = 2;
-    //    CGFloat postersPerLine = 3;
-    //    CGFloat itemWidth = (self.collectionView.frame.size.width - layout.minimumInteritemSpacing * (postersPerLine - 1)) / postersPerLine;
-    //    CGFloat itemHeight = itemWidth;
-    //    layout.itemSize = CGSizeMake(itemWidth, itemHeight);
 }
-
 
 - (void)fetchPosts{
     // construct query
